@@ -1,7 +1,44 @@
 @mixin clearfix {
   &::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
+  }
+}
+
+// Media Query Manager
+// 0 - 600px = 37.5em:       Phone  <<< Usually most important
+// 600 - 900px = 56.25em:    Tablet portrait <<< Same
+// 900-1200px = 75em:    Tablet landscape
+// 1200-1800px = 112.5em:  Normal Styles
+// 1800px+:         Large Monitor
+
+// ORDER: Base + Typography > general layout + grid > page layout > components
+
+// $breakpoint argument options:
+// - phone
+// - tab-port
+// -tab-land
+// -big-desktop
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and(max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    }
   }
 }

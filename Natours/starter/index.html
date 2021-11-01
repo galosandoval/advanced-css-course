@@ -9,7 +9,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/icon-font.css" />
-    <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -57,6 +56,9 @@
     <main>
       <section class="section-about">
         <div class="row">
+          <div class="u-center-text u-margin-bottom-large">
+            <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
+          </div>
           <div class="col-1-of-2">
             <h3 class="heading-tertiary u-margin-bottom-small">
               You're going to fall in love with nature
@@ -346,7 +348,13 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+            media="(max-width: 37.5em)"
+          />
+          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="full logo" />
+        </picture>  
       </div>
       <div class="row">
         <div class="col-1-of-2">
